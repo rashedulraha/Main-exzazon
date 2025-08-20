@@ -101,158 +101,325 @@
     </div>
 
     <!-- Header (Same as index.html) -->
+    <!-- Header -->
     <header
-      class="bg-white shadow-lg sticky top-0 z-50 border-b border-brand-electricViolet header-bg gpu-accelerated dark:bg-brand-dark"
+      class="fixed top-0 left-0 w-full z-50 transition-all duration-300 header-bg gpu-accelerated dark:bg-brand-dark/90 backdrop-blur-md border-b border-brand-orange/20"
     >
       <div
         class="container mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <div class="w-32 cursor-pointer logo">
-          <a href="/" class="logo" aria-label="Home"></a>
-        </div>
+        <!-- Logo - Using your SVG logo -->
+        <a href="index.html" class="flex items-center">
+          <!-- Light mode logo -->
+          <img
+            src="./img/logo-light.svg"
+            alt="Exzazon Logo"
+            class="h-10 dark:hidden"
+          />
+          <!-- Dark mode logo -->
+          <img
+            src="./img/logo-dark.svg"
+            alt="Exzazon Logo"
+            class="h-10 hidden dark:block"
+          />
+        </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex space-x-8" aria-label="Main navigation">
+        <nav
+          class="hidden lg:flex items-center space-x-1"
+          aria-label="Main navigation"
+        >
+          <!-- Navigation Links with hover effects -->
           <a
-            href="index.html#home"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Home</a
+            href="index.html"
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Home
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="about.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >About</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            About
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="services.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Services</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Services
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="process.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Process</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Process
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="testimonials.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Testimonials</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Testimonials
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="blog.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Blog</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Blog
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
           <a
             href="contact.html"
-            class="nav-link hover:text-brand-cyberTeal transition-colors"
-            >Contact</a
+            class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
           >
+            Contact
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
         </nav>
 
         <div class="flex items-center space-x-4">
+          <!-- Theme Toggle Button -->
           <div class="relative">
             <button
               id="themeToggle"
-              class="text-brand-cyberTeal hover:text-brand-neonPink transition-colors w-10 h-10 rounded-full flex items-center justify-center"
+              class="relative w-10 h-10 rounded-full flex items-center justify-center text-brand-cyberTeal hover:text-brand-neonPink transition-all duration-300 overflow-hidden group"
               aria-label="Toggle theme menu"
             >
-              <i id="themeIcon" class="fas fa-moon"></i>
+              <i
+                id="themeIcon"
+                class="fas fa-moon text-lg transition-transform duration-300 group-hover:rotate-12"
+              ></i>
+              <span
+                class="absolute inset-0 rounded-full bg-brand-cyberTeal/10 scale-0 group-hover:scale-100 transition-transform duration-300"
+              ></span>
             </button>
+            <!-- Theme Options Menu -->
             <div
               id="themeMenu"
-              class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden theme-menu"
+              class="absolute right-0 mt-2 w-48 bg-white dark:bg-brand-dark rounded-md shadow-lg py-1 z-50 hidden theme-menu border border-gray-200 dark:border-gray-700"
               role="menu"
             >
               <button
                 id="lightMode"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 w-full text-left transition-colors duration-200"
                 role="menuitem"
               >
-                <i class="fas fa-sun mr-2"></i> Light Mode
+                <i class="fas fa-sun mr-2 text-yellow-500"></i> Light Mode
               </button>
               <button
                 id="darkMode"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 w-full text-left transition-colors duration-200"
                 role="menuitem"
               >
-                <i class="fas fa-moon mr-2"></i> Dark Mode
+                <i class="fas fa-moon mr-2 text-indigo-500"></i> Dark Mode
               </button>
               <button
                 id="systemMode"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 w-full text-left transition-colors duration-200"
                 role="menuitem"
               >
-                <i class="fas fa-desktop mr-2"></i> System Mode
+                <i class="fas fa-desktop mr-2 text-gray-500"></i> System Mode
               </button>
             </div>
           </div>
 
-          <!-- Desktop Sign Up Button -->
+          <!-- Desktop CTA Button - Using solid color instead of gradient -->
           <button
-            class="hidden lg:block bg-brand-sunsetOrange text-[#212121] dark:text-[white] px-4 py-2 rounded-lg font-medium hover:bg-brand-neonPink transition-colors"
+            class="hidden lg:block relative px-4 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-lg group"
             onclick="showSignupModal()"
           >
-            Sign Up
+            <span class="relative z-10 flex items-center">
+              Get Started
+              <svg
+                class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </span>
           </button>
 
           <!-- Mobile Menu Button -->
           <button
             id="mobileMenuBtn"
-            class="lg:hidden text-brand-cyberTeal"
+            class="lg:hidden text-brand-cyberTeal w-10 h-10 rounded-lg flex items-center justify-center hover:bg-brand-orange/10 transition-colors duration-300"
             aria-label="Toggle mobile menu"
             aria-expanded="false"
           >
             <i
               id="menuIcon"
-              class="fas fa-bars text-2xl transition-transform duration-300"
+              class="fas fa-bars text-xl transition-transform duration-300"
             ></i>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- Mobile Menu (Same as index.html) -->
-    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobileMenuOverlay"
+      class="fixed inset-0 bg-black/50 z-40 hidden opacity-0 transition-opacity duration-300"
+    ></div>
+
+    <!-- Mobile Menu -->
     <div
       id="mobileMenu"
-      class="fixed inset-0 bg-brand-dark text-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden"
+      class="fixed top-0 right-0 h-full w-80 max-w-full bg-white dark:bg-brand-dark z-50 transform translate-x-full transition-transform duration-300 shadow-xl lg:hidden"
     >
-      <!-- Header -->
+      <!-- Mobile Menu Header -->
       <div
-        class="flex justify-between items-center p-4 border-b border-gray-700"
+        class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700"
       >
-        <div class="flex items-center space-x-2">
-          <h2 class="text-xl font-bold"><span>⚡EXZAZON</span></h2>
+        <!-- Mobile Logo -->
+        <div class="flex items-center">
+          <img
+            src="./img/logo-light.svg"
+            alt="Exzazon Logo"
+            class="h-8 dark:hidden"
+          />
+          <img
+            src="./img/logo-dark.svg"
+            alt="Exzazon Logo"
+            class="h-8 hidden dark:block"
+          />
         </div>
-        <button id="mobileMenuClose" class="text-white text-2xl">
-          <i class="fas fa-times"></i>
+        <button
+          id="mobileMenuClose"
+          class="text-gray-500 dark:text-gray-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors"
+        >
+          <i class="fas fa-times text-xl"></i>
         </button>
       </div>
 
-      <!-- Menu Content -->
-      <div class="p-4">
+      <!-- Mobile Menu Content -->
+      <div class="p-4 h-full overflow-y-auto">
         <nav
-          class="flex flex-col space-y-4"
+          class="flex flex-col space-y-2 mb-8"
           role="navigation"
           aria-label="Mobile navigation"
         >
-          <a href="index.html#home" class="mobile-nav-link">Home</a>
-          <a href="about.html" class="mobile-nav-link">About</a>
-          <a href="services.html" class="mobile-nav-link">Services</a>
-          <a href="process.html" class="mobile-nav-link">Process</a>
-          <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
-          <a href="blog.html" class="mobile-nav-link">Blog</a>
-          <a href="contact.html" class="mobile-nav-link">Contact</a>
+          <a
+            href="index.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-home mr-3 text-brand-orange"></i> Home
+          </a>
+          <a
+            href="about.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-info-circle mr-3 text-brand-orange"></i> About
+          </a>
+          <a
+            href="services.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-concierge-bell mr-3 text-brand-orange"></i>
+            Services
+          </a>
+          <a
+            href="process.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-tasks mr-3 text-brand-orange"></i> Process
+          </a>
+          <a
+            href="testimonials.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-quote-right mr-3 text-brand-orange"></i>
+            Testimonials
+          </a>
+          <a
+            href="blog.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-blog mr-3 text-brand-orange"></i> Blog
+          </a>
+          <a
+            href="contact.html"
+            class="mobile-nav-link px-4 py-3 rounded-lg text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 transition-colors duration-300 flex items-center"
+          >
+            <i class="fas fa-envelope mr-3 text-brand-orange"></i> Contact
+          </a>
         </nav>
 
-        <!-- Sign Up Button -->
+        <!-- Mobile CTA Button - Using solid color -->
         <button
-          class="mobile-menu-signup bg-brand-orange mt-6 bg-brand-sunsetOrange text-white px-4 py-2 rounded-lg font-medium hover:bg-brand-neonPink transition-colors"
+          class="w-full relative px-5 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-[1.02] hover:shadow-lg group mb-6"
           onclick="showSignupModal(); closeMobileMenu();"
         >
-          Sign Up
+          <span class="relative z-10 flex items-center justify-center">
+            Get Started
+            <svg
+              class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </span>
         </button>
+
+        <!-- Mobile Contact Info -->
+        <div class="p-4 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+          <h3 class="font-semibold text-brand-dark dark:text-brand-light mb-3">
+            Contact Information
+          </h3>
+          <div class="space-y-3">
+            <div
+              class="flex items-center text-brand-secondary dark:text-gray-300"
+            >
+              <i class="fas fa-map-marker-alt text-brand-orange mr-3"></i>
+              <span class="text-sm">Baia, Paba, Rajshahi</span>
+            </div>
+            <div
+              class="flex items-center text-brand-secondary dark:text-gray-300"
+            >
+              <i class="fas fa-phone text-brand-orange mr-3"></i>
+              <span class="text-sm">+880 1712-345678</span>
+            </div>
+            <div
+              class="flex items-center text-brand-secondary dark:text-gray-300"
+            >
+              <i class="fas fa-envelope text-brand-orange mr-3"></i>
+              <span class="text-sm">info@exzazon.com</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

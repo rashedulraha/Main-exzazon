@@ -177,31 +177,28 @@
       <div
         class="container mx-auto px-4 py-3 flex justify-between items-center"
       >
-        <!-- Logo with animation -->
-        <div class="flex items-center">
-          <div class="relative w-10 h-10 mr-2">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-pink rounded-lg animate-pulse-slow"
-            ></div>
-            <div
-              class="absolute inset-1 bg-white dark:bg-brand-dark rounded-md flex items-center justify-center"
-            >
-              <span class="text-brand-orange font-bold text-lg">E</span>
-            </div>
-          </div>
-          <a
-            href="index.html"
-            class="text-xl font-bold bg-gradient-to-r from-brand-orange to-brand-pink bg-clip-text text-transparent"
-          >
-            EXZAZON
-          </a>
-        </div>
+        <!-- Logo - Using your SVG logo -->
+        <a href="index.html" class="flex items-center">
+          <!-- Light mode logo -->
+          <img
+            src="./img/logo-light.svg"
+            alt="Exzazon Logo"
+            class="h-10 dark:hidden"
+          />
+          <!-- Dark mode logo -->
+          <img
+            src="./img/logo-dark.svg"
+            alt="Exzazon Logo"
+            class="h-10 hidden dark:block"
+          />
+        </a>
 
-        <!-- Desktop Navigation with hover effects -->
+        <!-- Desktop Navigation -->
         <nav
           class="hidden lg:flex items-center space-x-1"
           aria-label="Main navigation"
         >
+          <!-- Navigation Links with hover effects -->
           <a
             href="index.html"
             class="nav-link px-4 py-2 rounded-lg font-medium text-brand-dark dark:text-brand-light hover:bg-brand-orange/10 hover:text-brand-orange transition-all duration-300 relative group"
@@ -268,7 +265,7 @@
         </nav>
 
         <div class="flex items-center space-x-4">
-          <!-- Theme Toggle with animation -->
+          <!-- Theme Toggle Button -->
           <div class="relative">
             <button
               id="themeToggle"
@@ -283,6 +280,7 @@
                 class="absolute inset-0 rounded-full bg-brand-cyberTeal/10 scale-0 group-hover:scale-100 transition-transform duration-300"
               ></span>
             </button>
+            <!-- Theme Options Menu -->
             <div
               id="themeMenu"
               class="absolute right-0 mt-2 w-48 bg-white dark:bg-brand-dark rounded-md shadow-lg py-1 z-50 hidden theme-menu border border-gray-200 dark:border-gray-700"
@@ -312,9 +310,9 @@
             </div>
           </div>
 
-          <!-- Desktop CTA Button with animation -->
+          <!-- Desktop CTA Button - Using solid color instead of gradient -->
           <button
-            class="hidden lg:block relative px-5 py-2.5 bg-gradient-to-r from-brand-orange to-brand-pink text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+            class="hidden lg:block relative px-4 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-lg group"
             onclick="showSignupModal()"
           >
             <span class="relative z-10 flex items-center">
@@ -334,12 +332,9 @@
                 ></path>
               </svg>
             </span>
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-brand-pink to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></span>
           </button>
 
-          <!-- Mobile Menu Button with animation -->
+          <!-- Mobile Menu Button -->
           <button
             id="mobileMenuBtn"
             class="lg:hidden text-brand-cyberTeal w-10 h-10 rounded-lg flex items-center justify-center hover:bg-brand-orange/10 transition-colors duration-300"
@@ -370,22 +365,18 @@
       <div
         class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700"
       >
-        <div class="flex items-center space-x-2">
-          <div class="relative w-8 h-8 mr-2">
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-pink rounded-lg animate-pulse-slow"
-            ></div>
-            <div
-              class="absolute inset-1 bg-white dark:bg-brand-dark rounded-md flex items-center justify-center"
-            >
-              <span class="text-brand-orange font-bold text-sm">E</span>
-            </div>
-          </div>
-          <h2
-            class="text-xl font-bold bg-gradient-to-r from-brand-orange to-brand-pink bg-clip-text text-transparent"
-          >
-            EXZAZON
-          </h2>
+        <!-- Mobile Logo -->
+        <div class="flex items-center">
+          <img
+            src="./img/logo-light.svg"
+            alt="Exzazon Logo"
+            class="h-8 dark:hidden"
+          />
+          <img
+            src="./img/logo-dark.svg"
+            alt="Exzazon Logo"
+            class="h-8 hidden dark:block"
+          />
         </div>
         <button
           id="mobileMenuClose"
@@ -448,9 +439,9 @@
           </a>
         </nav>
 
-        <!-- Mobile CTA Button -->
+        <!-- Mobile CTA Button - Using solid color -->
         <button
-          class="w-full relative px-5 py-3 bg-gradient-to-r from-brand-orange to-brand-pink text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group mb-6"
+          class="w-full relative px-5 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-[1.02] hover:shadow-lg group mb-6"
           onclick="showSignupModal(); closeMobileMenu();"
         >
           <span class="relative z-10 flex items-center justify-center">
@@ -501,17 +492,17 @@
       </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Adjusted margins and spacing -->
     <section
       id="home"
-      class="pt-32 pb-20 md:pt-40 md:yb-28 relative overflow-hidden"
+      class="py-20 pt-28 pb-16 md:pt-32 md:pb-20 relative overflow-hidden"
     >
       <!-- Animated background -->
       <div
         class="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
       >
         <div
-          class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYxMCIgc3Ryb2tlLXdpZHRoPSIwLjUiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48L3N2Zz4=')] opacity-10 dark:opacity-5"
+          class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAw0c/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDYwIDYwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYxMCIgc3Ryb2tlLXdpZHRoPSIwLjUiIGQ9Ik0wIDBoNjB2NjBIMHoiLz48L3N2Zz4=')] opacity-10 dark:opacity-5"
         ></div>
 
         <!-- Animated particles -->
@@ -574,11 +565,11 @@
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="flex gap-12 flex-col md:flex-row items-center">
-          <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
+        <div class="flex gap-8 flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
             <!-- Badge with animation -->
             <div
-              class="mb-6 inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 optimized-border animate-fade-in"
+              class="mt-4 mb-2 inline-block px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 optimized-border animate-fade-in"
             >
               <p class="text-white text-sm font-medium flex items-center">
                 <span class="flex h-2 w-2 relative mr-2">
@@ -595,7 +586,7 @@
 
             <!-- Main heading with animation -->
             <h1
-              class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white hero-text animate-fade-in"
+              class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white hero-text animate-fade-in"
               style="animation-delay: 0.2s"
             >
               <span class="block">Transform Your</span>
@@ -655,13 +646,13 @@
               </div>
             </div>
 
-            <!-- CTA Buttons with animation -->
+            <!-- CTA Buttons with animation - Using solid colors -->
             <div
-              class="flex flex-col lg:flex-row gap-4 item-center animate-fade-in"
+              class="flex flex-col sm:flex-row gap-4 items-center animate-fade-in"
               style="animation-delay: 0.8s"
             >
               <button
-                class="group relative px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl gpu-accelerated animate-glow"
+                class="group relative px-8 py-3 bg-brand-btn text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-xl gpu-accelerated animate-glow"
                 onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
               >
                 <span class="relative z-10 flex items-center">
@@ -681,9 +672,6 @@
                     ></path>
                   </svg>
                 </span>
-                <div
-                  class="absolute inset-0 bg-gradient-to-r from-purple-600 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                ></div>
               </button>
               <button
                 class="group relative px-8 py-3 bg-transparent text-white font-semibold rounded-full border-2 border-white/30 overflow-hidden transition-all duration-300 hover:border-white/60 hover:scale-105 gpu-accelerated"
@@ -909,10 +897,10 @@
       </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section - Structured like the Home section -->
     <section
       id="features"
-      class="py-20 bg-white relative overflow-hidden dark:bg-brand-dark"
+      class="py-16 mt-20 bg-white relative overflow-hidden dark:bg-brand-dark"
     >
       <!-- Background decoration -->
       <div
@@ -933,7 +921,7 @@
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-12" data-aos="fade-up">
           <div class="inline-flex items-center justify-center mb-4">
             <div class="w-12 h-0.5 bg-brand-orange"></div>
             <span class="mx-4 text-brand-orange font-medium">Our Features</span>
@@ -957,15 +945,15 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Feature 1 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="100"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brand-orange to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-chart-line text-white text-2xl"></i>
             </div>
@@ -986,12 +974,12 @@
 
           <!-- Feature 2 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-brand-blue rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-home text-white text-2xl"></i>
             </div>
@@ -1012,12 +1000,12 @@
 
           <!-- Feature 3 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="300"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-brand-btn to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-brand-btn rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-shopping-cart text-white text-2xl"></i>
             </div>
@@ -1038,12 +1026,12 @@
 
           <!-- Feature 4 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="400"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-green-500 to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-pen-fancy text-white text-2xl"></i>
             </div>
@@ -1064,12 +1052,12 @@
 
           <!-- Feature 5 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="500"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-search text-white text-2xl"></i>
             </div>
@@ -1090,12 +1078,12 @@
 
           <!-- Feature 6 -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            class="bg-white p-6 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
             data-aos="fade-up"
             data-aos-delay="600"
           >
             <div
-              class="w-16 h-16 bg-gradient-to-br from-red-500 to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+              class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
             >
               <i class="fas fa-envelope text-white text-2xl"></i>
             </div>
@@ -1117,7 +1105,7 @@
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- Why Choose Us Section - Structured like the Home section -->
     <section
       class="py-20 bg-gray-50 relative overflow-hidden dark:bg-brand-dark"
     >
@@ -1140,7 +1128,7 @@
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-12" data-aos="fade-up">
           <div class="inline-flex items-center justify-center mb-4">
             <div class="w-12 h-0.5 bg-brand-orange"></div>
             <span class="mx-4 text-brand-orange font-medium"
@@ -1166,7 +1154,7 @@
         </div>
 
         <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto"
+          class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto"
         >
           <div data-aos="fade-right">
             <div class="space-y-6">
@@ -1308,13 +1296,10 @@
 
               <div class="mt-8 text-center">
                 <button
-                  class="relative px-8 py-3 bg-gradient-to-r from-brand-orange to-brand-pink text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+                  class="relative px-8 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-lg group"
                   onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
                 >
                   <span class="relative z-10">Get Started Today</span>
-                  <span
-                    class="absolute inset-0 bg-gradient-to-r from-brand-pink to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  ></span>
                 </button>
               </div>
             </div>
@@ -1323,8 +1308,8 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="py-20 bg-white relative overflow-hidden dark:bg-brand-dark">
+    <!-- Portfolio Section - Structured like the Home section -->
+    <section class="py-16 bg-white relative overflow-hidden dark:bg-brand-dark">
       <!-- Background decoration -->
       <div
         class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
@@ -1344,7 +1329,7 @@
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-12" data-aos="fade-up">
           <div class="inline-flex items-center justify-center mb-4">
             <div class="w-12 h-0.5 bg-brand-orange"></div>
             <span class="mx-4 text-brand-orange font-medium"
@@ -1369,7 +1354,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Portfolio Item 1 -->
           <div
             class="group relative overflow-hidden rounded-xl shadow-lg card-hover dark:bg-brand-dark optimized-border gpu-accelerated"
@@ -1485,21 +1470,18 @@
           </div>
         </div>
 
-        <div class="text-center mt-12" data-aos="fade-up">
+        <div class="text-center mt-10" data-aos="fade-up">
           <a
             href="testimonials.html"
-            class="inline-block relative px-8 py-3 bg-gradient-to-r from-brand-orange to-brand-pink text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+            class="inline-block relative px-8 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-lg group"
           >
             <span class="relative z-10">View All Case Studies</span>
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-brand-pink to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section - Structured like the Home section -->
     <section
       class="py-20 bg-gray-50 relative overflow-hidden dark:bg-brand-dark"
     >
@@ -1522,7 +1504,7 @@
       </div>
 
       <div class="container mx-auto px-4 relative z-10">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-12" data-aos="fade-up">
           <div class="inline-flex items-center justify-center mb-4">
             <div class="w-12 h-0.5 bg-brand-orange"></div>
             <span class="mx-4 text-brand-orange font-medium"
@@ -1554,7 +1536,7 @@
           >
             <div class="flex flex-col items-center text-center">
               <div
-                class="w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-accent rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-6"
+                class="w-20 h-20 bg-brand-orange rounded-full flex items-center justify-center text-white font-bold text-2xl shadow-lg mb-6"
               >
                 A
               </div>
@@ -1598,21 +1580,18 @@
           </div>
         </div>
 
-        <div class="text-center mt-12" data-aos="fade-up">
+        <div class="text-center mt-10" data-aos="fade-up">
           <a
             href="testimonials.html"
-            class="inline-block relative px-8 py-3 bg-gradient-to-r from-brand-orange to-brand-pink text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg group"
+            class="inline-block relative px-8 py-3 bg-brand-btn text-white font-medium rounded-lg overflow-hidden transition-all duration-300 hover:bg-brand-orange-dark hover:scale-105 hover:shadow-lg group"
           >
             <span class="relative z-10">Read More Testimonials</span>
-            <span
-              class="absolute inset-0 bg-gradient-to-r from-brand-pink to-brand-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            ></span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA Section - Using solid colors -->
     <section class="py-20 relative overflow-hidden">
       <!-- Background decoration -->
       <div class="absolute inset-0 overflow-hidden">
@@ -1636,7 +1615,7 @@
         <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
           <div class="mb-8 inline-block relative">
             <div
-              class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-yellow-300 rounded-full blur-md opacity-70 animate-pulse"
+              class="absolute inset-0 bg-yellow-500 rounded-full blur-md opacity-70 animate-pulse"
             ></div>
             <div class="relative rounded-full px-5 py-3 border bg-brand-orange">
               <p class="text-sm font-medium flex items-center">
@@ -1663,7 +1642,7 @@
             class="flex flex-col sm:flex-row justify-center items-center gap-4"
           >
             <button
-              class="group relative px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-300 text-gray-900 font-bold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden animate-glow"
+              class="group relative px-8 py-3 bg-brand-btn text-white font-bold text-lg rounded-full shadow-lg hover:bg-brand-orange-dark hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden animate-glow"
               onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
             >
               <span class="relative z-10 flex items-center">
@@ -1672,9 +1651,6 @@
                   class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"
                 ></i>
               </span>
-              <div
-                class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-200 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              ></div>
             </button>
 
             <a
@@ -1973,7 +1949,7 @@
     <!-- Back to top button -->
     <button
       id="backToTop"
-      class="fixed bottom-8 right-8 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center text-white shadow-lg hover:bg-brand-accent transition-all duration-300 opacity-0 invisible"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center text-white shadow-lg hover:bg-brand-orange-dark transition-all duration-300 opacity-0 invisible"
       aria-label="Back to top"
     >
       <i class="fas fa-arrow-up"></i>
@@ -2061,7 +2037,7 @@
           </div>
           <button
             type="submit"
-            class="w-full bg-brand-orange text-white py-2 rounded-lg font-semibold hover:bg-brand-neonPink transition-colors"
+            class="w-full bg-brand-orange text-white py-2 rounded-lg font-semibold hover:bg-brand-orange-dark transition-colors"
           >
             Sign Up
           </button>
@@ -2069,7 +2045,7 @@
         <div class="mt-4 text-center">
           <p class="text-gray-600 dark:text-gray-400">
             Already have an account?
-            <a href="#" class="text-brand-orange hover:text-brand-neonPink"
+            <a href="#" class="text-brand-orange hover:text-brand-orange-dark"
               >Log In</a
             >
           </p>
@@ -2083,5 +2059,15 @@
     <script src="./js/carousel.js"></script>
     <script src="./js/form.js"></script>
     <script src="./js/main.js"></script>
+
+    <style>
+      /* Custom CSS for brand-orange-dark */
+      .bg-brand-orange-dark {
+        background-color: #e65c00;
+      }
+      .hover\:bg-brand-orange-dark:hover {
+        background-color: #e65c00;
+      }
+    </style>
   </body>
 </html>
