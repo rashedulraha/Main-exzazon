@@ -1,0 +1,26 @@
+{
+  "name": "exzazon-website",
+  "version": "1.0.0",
+  "description": "Exzazon is a leading digital marketing agency in Rajshahi, Bangladesh, specializing in performance-based marketing solutions. We drive business growth through strategic real estate marketing, e-commerce solutions, and data-driven campaigns. With 200+ happy clients and 95% success rate, we deliver measurable ROI for businesses across Bangladesh. Transform your digital presence today!",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify"
+  },
+  "keywords": [
+    "digital-marketing",
+    "rajshahi",
+    "bangladesh",
+    "performance-marketing",
+    "real-estate",
+    "e-commerce"
+  ],
+  "author": "Rashedul",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2"
+  }
+}

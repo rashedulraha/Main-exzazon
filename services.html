@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Exzazon Digital Marketing</title>
+    <link
+      rel="shortcut icon"
+      href="./img/logoFaveicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="Explore our comprehensive digital marketing services including performance marketing, real estate marketing, and e-commerce solutions."
+    />
+    <meta
+      name="keywords"
+      content="digital marketing services, performance marketing, real estate marketing, e-commerce solutions"
+    />
+    <meta name="author" content="Exzazon" />
+
+    <!-- Local CSS files -->
+    <link rel="stylesheet" href="./css/tailwind.min.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/aos.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Custom Config -->
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "brand-orange": "#ff6d00",
+              "brand-dark": "#212121",
+              "brand-light": "#ffffff",
+              "brand-accent": "#7f00ff",
+              "brand-secondary": "#4A5568",
+              "brand-btn": "#ff6d00",
+              "brand-blue": "#00f5d4",
+              "brand-violet": "#7f00ff",
+              "brand-pink": "#ff00a0",
+              "brand-teal": "#00f5d4",
+              "brand-bg": "#050517",
+              "brand-text": "#f8f9fa",
+            },
+            fontFamily: {
+              barlow: ["Barlow", "sans-serif"],
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "gradient-x": "gradient-x 3s ease infinite",
+              "fade-in": "fade-in 0.6s ease-out forwards",
+              "slide-right": "slide-right 0.3s ease-out forwards",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+              "gradient-x": {
+                "0%, 100%": {
+                  "background-size": "200% 200%",
+                  "background-position": "left center",
+                },
+                "50%": {
+                  "background-size": "200% 200%",
+                  "background-position": "right center",
+                },
+              },
+              "fade-in": {
+                from: { opacity: 0, transform: "translateY(20px)" },
+                to: { opacity: 1, transform: "translateY(0)" },
+              },
+              "slide-right": {
+                from: { transform: "translateX(100%)" },
+                to: { transform: "translateX(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-barlow overflow-x-hidden transition-colors duration-300">
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 bg-white z-50 flex items-center justify-center dark:bg-brand-dark"
+    >
+      <div class="text-center">
+        <div
+          class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mx-auto mb-4"
+        ></div>
+        <p class="text-brand-dark dark:text-brand-light">Loading...</p>
+      </div>
+    </div>
+
+    <!-- Header (Same as index.html) -->
+    <header
+      class="bg-white shadow-lg sticky top-0 z-50 border-b border-brand-electricViolet header-bg gpu-accelerated dark:bg-brand-dark"
+    >
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="w-32 cursor-pointer logo">
+          <a href="/" class="logo" aria-label="Home"></a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex space-x-8" aria-label="Main navigation">
+          <a
+            href="index.html#home"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Services</a
+          >
+          <a
+            href="process.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Process</a
+          >
+          <a
+            href="testimonials.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Testimonials</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link hover:text-brand-cyberTeal transition-colors"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <button
+              id="themeToggle"
+              class="text-brand-cyberTeal hover:text-brand-neonPink transition-colors w-10 h-10 rounded-full flex items-center justify-center"
+              aria-label="Toggle theme menu"
+            >
+              <i id="themeIcon" class="fas fa-moon"></i>
+            </button>
+            <div
+              id="themeMenu"
+              class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden theme-menu"
+              role="menu"
+            >
+              <button
+                id="lightMode"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem"
+              >
+                <i class="fas fa-sun mr-2"></i> Light Mode
+              </button>
+              <button
+                id="darkMode"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem"
+              >
+                <i class="fas fa-moon mr-2"></i> Dark Mode
+              </button>
+              <button
+                id="systemMode"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                role="menuitem"
+              >
+                <i class="fas fa-desktop mr-2"></i> System Mode
+              </button>
+            </div>
+          </div>
+
+          <!-- Desktop Sign Up Button -->
+          <button
+            class="hidden lg:block bg-brand-sunsetOrange text-[#212121] dark:text-[white] px-4 py-2 rounded-lg font-medium hover:bg-brand-neonPink transition-colors"
+            onclick="showSignupModal()"
+          >
+            Sign Up
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden text-brand-cyberTeal"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <i
+              id="menuIcon"
+              class="fas fa-bars text-2xl transition-transform duration-300"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu (Same as index.html) -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-brand-dark text-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden"
+    >
+      <!-- Header -->
+      <div
+        class="flex justify-between items-center p-4 border-b border-gray-700"
+      >
+        <div class="flex items-center space-x-2">
+          <h2 class="text-xl font-bold"><span>⚡EXZAZON</span></h2>
+        </div>
+        <button id="mobileMenuClose" class="text-white text-2xl">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Menu Content -->
+      <div class="p-4">
+        <nav
+          class="flex flex-col space-y-4"
+          role="navigation"
+          aria-label="Mobile navigation"
+        >
+          <a href="index.html#home" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About</a>
+          <a href="services.html" class="mobile-nav-link">Services</a>
+          <a href="process.html" class="mobile-nav-link">Process</a>
+          <a href="testimonials.html" class="mobile-nav-link">Testimonials</a>
+          <a href="blog.html" class="mobile-nav-link">Blog</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+
+        <!-- Sign Up Button -->
+        <button
+          class="mobile-menu-signup bg-brand-orange mt-6 bg-brand-sunsetOrange text-white px-4 py-2 rounded-lg font-medium hover:bg-brand-neonPink transition-colors"
+          onclick="showSignupModal(); closeMobileMenu();"
+        >
+          Sign Up
+        </button>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-20 bg-gray-50 relative overflow-hidden dark:bg-brand-dark"
+    >
+      <!-- Background decoration -->
+      <div
+        class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
+      >
+        <div
+          class="absolute top-20 right-10 w-32 h-32 bg-brand-orange bg-opacity-5 rounded-full"
+        ></div>
+        <div
+          class="absolute bottom-20 left-10 w-40 h-40 bg-brand-blue bg-opacity-5 rounded-full"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/3 w-6 h-6 bg-brand-orange bg-opacity-10 rounded-full"
+        ></div>
+        <div
+          class="absolute top-1/3 right-1/4 w-8 h-8 bg-brand-blue bg-opacity-10 rounded-full"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Services</li>
+          </ol>
+        </nav>
+
+        <div class="text-center mb-16" data-aos="fade-up">
+          <div class="inline-flex items-center justify-center mb-4">
+            <div class="w-12 h-0.5 bg-brand-orange"></div>
+            <span class="mx-4 text-brand-orange font-medium">Our Services</span>
+            <div class="w-12 h-0.5 bg-brand-orange"></div>
+          </div>
+
+          <div class="text-center">
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-4 section-title relative inline-block dark:text-brand-light"
+            >
+              Our Services
+              <span
+                class="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-brand-orange to-brand-blue rounded-full"
+              ></span>
+            </h2>
+            <p
+              class="text-lg text-brand-secondary max-w-2xl mx-auto mt-6 dark:text-gray-300"
+            >
+              We provide specialized services for your business growth
+            </p>
+          </div>
+        </div>
+
+        <!-- Service Tabs -->
+        <div
+          class="flex flex-wrap justify-center mb-12"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div
+            class="grid grid-cols-2 gap-4 md:inline-flex bg-white p-2 rounded-lg shadow-sm dark:bg-brand-dark optimized-border"
+          >
+            <button
+              class="service-tab active bg-brand-orange text-white px-6 py-2 rounded-md text-sm font-medium transition-all duration-300"
+              data-service="all"
+            >
+              All Services
+            </button>
+            <button
+              class="service-tab px-6 py-2 hover:bg-brand-orange hover:text-white rounded-md text-sm font-medium transition-all duration-300 dark:text-gray-300"
+              data-service="marketing"
+            >
+              Marketing
+            </button>
+            <button
+              class="service-tab px-6 py-2 hover:bg-brand-orange hover:text-white rounded-md text-sm font-medium transition-all duration-300 dark:text-gray-300"
+              data-service="realestate"
+            >
+              Real Estate
+            </button>
+            <button
+              class="service-tab px-6 py-2 hover:bg-brand-orange hover:text-white rounded-md text-sm font-medium transition-all duration-300 dark:text-gray-300"
+              data-service="ecommerce"
+            >
+              E-commerce
+            </button>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Service Card 1 -->
+          <div
+            class="service-card-item bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-category="marketing"
+          >
+            <!-- Card top decoration -->
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-orange to-brand-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            ></div>
+
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brand-orange to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+            >
+              <i class="fas fa-chart-line text-white text-2xl"></i>
+            </div>
+
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold dark:text-brand-light">
+                Performance Marketing
+              </h3>
+              <span
+                class="px-3 py-1 bg-brand-orange bg-opacity-10 text-brand-orange text-xs rounded-full"
+                >Popular</span
+              >
+            </div>
+
+            <p class="text-brand-secondary mb-6 dark:text-gray-300">
+              ROI-focused digital marketing campaigns that guarantee real
+              results
+            </p>
+
+            <!-- Features -->
+            <ul class="space-y-2 text-brand-secondary mb-6 dark:text-gray-300">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                Facebook/Instagram Ads
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                Google Ads
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-orange mr-2"></i>
+                Conversion Optimization
+              </li>
+            </ul>
+
+            <!-- Stats -->
+            <div class="bg-gray-50 rounded-lg p-4 mb-6 dark:bg-brand-dark/50">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-brand-secondary dark:text-gray-300"
+                  >Average ROI</span
+                >
+                <span class="text-lg font-bold text-brand-orange">350%</span>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-2 text-center text-brand-orange font-medium rounded-lg border border-brand-orange hover:bg-brand-orange hover:text-white transition-colors duration-300"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="service-card-item bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-category="realestate"
+          >
+            <!-- Card top decoration -->
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-blue to-brand-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            ></div>
+
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brand-blue to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+            >
+              <i class="fas fa-home text-white text-2xl"></i>
+            </div>
+
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold dark:text-brand-light">
+                Real Estate Marketing
+              </h3>
+              <span
+                class="px-3 py-1 bg-brand-blue bg-opacity-10 text-brand-blue text-xs rounded-full"
+                >Expert</span
+              >
+            </div>
+
+            <p class="text-brand-secondary mb-6 dark:text-gray-300">
+              Specialized marketing solutions for flat and property sales
+            </p>
+
+            <!-- Features -->
+            <ul class="space-y-2 text-brand-secondary mb-6 dark:text-gray-300">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-blue mr-2"></i>
+                Property Photography
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-blue mr-2"></i>
+                Virtual Tours
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-blue mr-2"></i>
+                Targeted Advertising
+              </li>
+            </ul>
+
+            <!-- Stats -->
+            <div class="bg-gray-50 rounded-lg p-4 mb-6 dark:bg-brand-dark/50">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-brand-secondary dark:text-gray-300"
+                  >Sales Increase</span
+                >
+                <span class="text-lg font-bold text-brand-blue">65%</span>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-2 text-center text-brand-blue font-medium rounded-lg border border-brand-blue hover:bg-brand-blue hover:text-white transition-colors duration-300"
+            >
+              Learn More
+            </button>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="service-card-item bg-white p-8 rounded-2xl shadow-lg card-hover service-card overflow-hidden group dark:bg-brand-dark optimized-border gpu-accelerated"
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-category="ecommerce"
+          >
+            <!-- Card top decoration -->
+            <div
+              class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-btn to-brand-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"
+            ></div>
+
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-brand-btn to-brand-accent rounded-full flex items-center justify-center mb-6 service-icon group-hover:scale-110 transition-transform duration-300 shadow-md gpu-accelerated"
+            >
+              <i class="fas fa-shopping-cart text-white text-2xl"></i>
+            </div>
+
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-xl font-semibold dark:text-brand-light">
+                E-commerce Solutions
+              </h3>
+              <span
+                class="px-3 py-1 bg-brand-btn bg-opacity-10 text-brand-btn text-xs rounded-full"
+                >New</span
+              >
+            </div>
+
+            <p class="text-brand-secondary mb-6 dark:text-gray-300">
+              Digital growth strategies for online stores and retail businesses
+            </p>
+
+            <!-- Features -->
+            <ul class="space-y-2 text-brand-secondary mb-6 dark:text-gray-300">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-btn mr-2"></i>
+                Product Photography
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-btn mr-2"></i>
+                Content Creation
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-brand-btn mr-2"></i>
+                Sales Funnel Setup
+              </li>
+            </ul>
+
+            <!-- Stats -->
+            <div class="bg-gray-50 rounded-lg p-4 mb-6 dark:bg-brand-dark/50">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-brand-secondary dark:text-gray-300"
+                  >Conversion Rate</span
+                >
+                <span class="text-lg font-bold text-brand-btn">42%</span>
+              </div>
+            </div>
+
+            <button
+              class="w-full py-2 text-center text-brand-btn font-medium rounded-lg border border-brand-btn hover:bg-brand-btn hover:text-white transition-colors duration-300"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-8 dark:text-brand-light">
+            More Services
+          </h3>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div
+              class="bg-white border p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group dark:bg-brand-dark dark:border-gray-700 optimized-border gpu-accelerated"
+            >
+              <div
+                class="w-12 h-12 bg-brand-orange bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-pen-fancy text-brand-orange text-xl group-hover:text-white"
+                ></i>
+              </div>
+              <h4 class="font-semibold mb-2 dark:text-brand-light">
+                Content Marketing
+              </h4>
+              <p class="text-sm text-brand-secondary dark:text-gray-300">
+                Strategic content creation
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 border rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group dark:bg-brand-dark dark:border-gray-700 optimized-border gpu-accelerated"
+            >
+              <div
+                class="w-12 h-12 bg-brand-blue bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-search text-brand-blue text-xl group-hover:text-white"
+                ></i>
+              </div>
+              <h4 class="font-semibold mb-2 dark:text-brand-light">SEO</h4>
+              <p class="text-sm text-brand-secondary dark:text-gray-300">
+                Search engine optimization
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 border rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group dark:bg-brand-dark dark:border-gray-700 optimized-border gpu-accelerated"
+            >
+              <div
+                class="w-12 h-12 bg-brand-accent bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-video text-brand-accent text-xl group-hover:text-white"
+                ></i>
+              </div>
+              <h4 class="font-semibold mb-2 dark:text-brand-light">
+                Video Marketing
+              </h4>
+              <p class="text-sm text-brand-secondary dark:text-gray-300">
+                Video content production
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-6 border rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group dark:bg-brand-dark dark:border-gray-700 optimized-border gpu-accelerated"
+            >
+              <div
+                class="w-12 h-12 bg-brand-btn bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-btn group-hover:text-white transition-colors duration-300"
+              >
+                <i
+                  class="fas fa-envelope text-brand-btn text-xl group-hover:text-white"
+                ></i>
+              </div>
+              <h4 class="font-semibold mb-2 dark:text-brand-light">
+                Email Marketing
+              </h4>
+              <p class="text-sm text-brand-secondary dark:text-gray-300">
+                Targeted email campaigns
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-brand-deepNavy text-white py-12 dark:bg-brand-dark">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div data-aos="fade-up">
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="text-2xl text-brand-neonPink">⚡</div>
+              <h3 class="text-xl font-bold gradient-text">EXZAZON</h3>
+            </div>
+            <p class="text-gray-400 mb-4">Ignite Excellence. Empower Growth.</p>
+            <p class="text-gray-400 mb-4">
+              Transform your career with our expert-led courses and practical
+              projects designed for real-world success.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                aria-label="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h4 class="text-lg font-semibold mb-4 text-brand-lightText">
+              Quick Links
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html#home"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="process.html"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Process</a
+                >
+              </li>
+              <li>
+                <a
+                  href="testimonials.html"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="blog.html"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h4 class="text-lg font-semibold mb-4 text-brand-lightText">
+              Categories
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Performance Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Real Estate Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >E-commerce Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >Content Marketing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-brand-cyberTeal transition-colors"
+                  >SEO Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h4 class="text-lg font-semibold mb-4 text-brand-lightText">
+              Contact Us
+            </h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-brand-neonPink mt-1 mr-3"
+                ></i>
+                <span class="text-gray-400"
+                  >Head Office: Baia, Paba, Rajshahi</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone text-brand-neonPink mt-1 mr-3"></i>
+                <span class="text-gray-400">+880 1712-345678</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-brand-neonPink mt-1 mr-3"></i>
+                <span class="text-gray-400">info@exzazon.com</span>
+              </li>
+            </ul>
+            <h4 class="text-lg font-semibold mb-4 mt-6 text-brand-lightText">
+              Newsletter
+            </h4>
+            <p class="text-gray-400 mb-4">
+              Subscribe to get updates on new services and offers.
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="bg-brand-dark text-brand-lightText px-4 py-2 rounded-l-lg w-full focus:outline-none focus:ring-2 focus:ring-brand-neonPink"
+                id="newsletterEmail"
+                aria-label="Email for newsletter"
+              />
+              <button
+                class="bg-[#ff00a0] px-4 py-2 rounded-r-lg hover:bg-brand-electricViolet transition-colors"
+                onclick="subscribeNewsletter()"
+                aria-label="Subscribe to newsletter"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2023 EXZAZON. ||
+            <a
+              class="text-gray-900 dark:text-white hover:underline transition-colors duration-300"
+              target="_blank"
+              href="https://www.linkedin.com/in/rashedulraha/"
+              >Rashedul Islam</a
+            >
+            > || All rights reserved.
+          </p>
+          <div class="mt-2 flex justify-center space-x-4 flex-wrap">
+            <a href="#" class="hover:text-brand-cyberTeal transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-brand-cyberTeal transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-brand-cyberTeal transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      id="backToTop"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-brand-orange rounded-full flex items-center justify-center text-white shadow-lg hover:bg-brand-accent transition-all duration-300 opacity-0 invisible"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Signup Modal (Same as index.html) -->
+    <div
+      id="signupModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div
+        class="bg-white rounded-lg p-8 max-w-md w-full mx-4 dark:bg-brand-dark optimized-border"
+      >
+        <div class="flex justify-between items-center mb-6">
+          <h3 id="modalTitle" class="text-2xl font-bold dark:text-brand-light">
+            Sign Up
+          </h3>
+          <button
+            onclick="closeSignupModal()"
+            class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            aria-label="Close signup modal"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form id="signupForm">
+          <div class="mb-4">
+            <label
+              for="signupName"
+              class="block text-gray-700 mb-2 dark:text-gray-300"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="signupName"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange dark:bg-brand-dark/50 dark:border-gray-700 dark:text-brand-light"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="signupEmail"
+              class="block text-gray-700 mb-2 dark:text-gray-300"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="signupEmail"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange dark:bg-brand-dark/50 dark:border-gray-700 dark:text-brand-light"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              for="signupPassword"
+              class="block text-gray-700 mb-2 dark:text-gray-300"
+              >Password</label
+            >
+            <input
+              type="password"
+              id="signupPassword"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange dark:bg-brand-dark/50 dark:border-gray-700 dark:text-brand-light"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              for="signupPhone"
+              class="block text-gray-700 mb-2 dark:text-gray-300"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="signupPhone"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-orange dark:bg-brand-dark/50 dark:border-gray-700 dark:text-brand-light"
+              required
+              aria-required="true"
+            />
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-brand-orange text-white py-2 rounded-lg font-semibold hover:bg-brand-neonPink transition-colors"
+          >
+            Sign Up
+          </button>
+        </form>
+        <div class="mt-4 text-center">
+          <p class="text-gray-600 dark:text-gray-400">
+            Already have an account?
+            <a href="#" class="text-brand-orange hover:text-brand-neonPink"
+              >Log In</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Local JavaScript files -->
+    <script src="./js/aos.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
